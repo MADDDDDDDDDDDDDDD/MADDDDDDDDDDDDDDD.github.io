@@ -1,0 +1,517 @@
+/* 기본 설정 */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black; /* 배경색 검정 */
+    color: white; /* 기본 텍스트 흰색 */
+    font-family: Arial, sans-serif;
+}
+
+.navbar-brand img {
+        position:relative;
+        left: 20px;
+        bottom: 5px;
+        border-radius: 50%; /* 동그라미 모양 */
+        border: 2px solid #fff; /* 선택적으로 테두리 추가 */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 선택적으로 그림자 추가 */
+    }
+
+
+    
+.d-flex{
+    position: relative;
+    right: 20px;
+    top:5px;
+    
+}
+.nav-item{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    position:relative;
+    left: 20px;
+
+}
+.jellycat{
+    font-family: fantasy;
+    font-size: 30px;
+    position: relative;
+    left: 90px;
+}
+
+.monamhee{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    position: relative;
+    left: 140px
+}
+
+.godashin{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serifs;
+    font-size: 30px;
+    position: relative;
+    left: 190px;
+}
+
+.olivet{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    position: relative;
+    left:240px;
+}
+
+/* Navbar 스타일 */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent; /* 처음에는 투명 */
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.navbar.scrolled {
+    background-color: white; /* 스크롤 시 흰색 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+.navbar a {
+    color: white; /* 기본 링크 색상 흰색 */
+    transition: color 0.5s ease;
+}
+
+.navbar.scrolled a {
+    color: black; /* 스크롤 시 링크 색상 검정 */
+}
+
+/* DUDEOJI 텍스트 중앙 배치 */
+.title-container {
+    height: 100vh; /* 화면 전체 높이 */
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.main-title {
+    font-size: 10vw; /* 텍스트 크기를 화면 너비 비율로 설정 */
+    text-transform: uppercase;
+    color: white; /* 기본 색상 흰색 */
+    animation: fadeIn 1s ease; /* 부드럽게 나타나는 효과 */
+}
+
+/* 스크롤 시 DUDEOJI 텍스트 사라짐 */
+.title-container.scrolled {
+    opacity: 0; /* 완전히 투명 */
+    transform: translateY(-50px); /* 위로 사라지는 애니메이션 */
+}
+
+/* DUDEOJI 텍스트 등장 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 페이지 전체를 flex 컨테이너로 설정 */
+body {
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    height: 100vh; /* 화면 높이 전체 사용 */
+    margin: 0; /* 기본 여백 제거 */
+    background-color: #000; /* 배경 색상 (필요에 따라 변경) */
+}
+
+.d-flex search-form {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    left:900px;
+}
+
+
+.jellycat-container {
+    text-align: center; /* 가운데 정렬 */
+    animation: fadeIn 1.5s ease-in-out; /* 애니메이션 적용 */
+    opacity: 0; /* 초기값: 보이지 않음 */
+    animation-fill-mode: forwards; /* 애니메이션 끝난 후 상태 유지 */
+    position: absolute; /* 수정된 부분: fixed에서 absolute로 변경 */
+    top: 35%; /* 여전히 top 위치는 설정 */
+    left: 1%; /* 가운데 정렬 */
+    transform: translateX(-50%); /* 정확히 가운데로 위치 */
+}
+
+/* 로고 스타일 */
+.jellycatlogo {
+    display: block; /* 블록 요소로 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
+    border-radius: 50%; /* 둥근 모양 */
+    border: 2px solid #fff; /* 테두리 추가 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 그림자 */
+    animation: fadeIn 2s ease-in-out; /* 애니메이션 추가 */
+}
+
+/* 제목 스타일 */
+.jellycattitle {
+    font-size: 36px; /* 제목 크기 */
+    font-weight: bold; /* 제목 굵기 */
+    color: whitesmoke; /* 제목 색상 */
+    margin-top: 20px; /* 로고와 제목 사이 여백 */
+    animation: fadeIn 2.5s ease-in-out; /* 애니메이션 추가 */
+}
+
+/* 설명 스타일 */
+.jellycat-description {
+    font-size: 18px; /* 설명 텍스트 크기 */
+    line-height: 1.6; /* 줄 간격 */
+    color: white; /* 텍스트 색상 */
+    text-align: center; /* 가운데 정렬 */
+    margin: 0 auto; /* 중앙 정렬 */
+    width: 60%; /* 텍스트 블록 너비 */
+    animation: fadeIn 3s ease-in-out; /* 애니메이션 추가 */
+}
+
+/* fadeIn 애니메이션 정의 */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* 처음에 보이지 않음 */
+        transform: translateY(20px); /* 아래쪽에서 위로 이동 */
+    }
+    to {
+        opacity: 1; /* 완전히 보임 */
+        transform: translateY(0); /* 제자리 */
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Jellycat image container styling */
+.jellycat-bear-ring {
+    position: absolute; /* Use absolute positioning */
+    right: 70%; /* Adjust positioning as needed */
+    top: 113%; /* Adjust positioning as needed */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Change the image on hover */
+.jellycat-bear-ring:hover {
+    content: url('Image/jellycat1-a.png'); /* Replace with the new image path */
+}
+
+/* Title styling */
+.jbeard {
+    position: absolute; /* Use absolute positioning */
+    right: 70%; /* Adjust positioning as needed */
+    top: 103%; /* Adjust positioning as needed */
+}
+
+/* Price styling */
+.jbeard2 {
+    position: absolute; /* Use absolute positioning */
+    right: 80%; /* Adjust positioning as needed */
+    top: 107%; /* Adjust positioning as needed */
+}
+
+
+
+
+.jellycat-rabbit {
+    position: absolute; /* Use absolute positioning */
+    right: 40%; /* Adjust positioning as needed */
+    top: 113%; /* Adjust positioning as needed */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Change the image on hover */
+.jellycat-rabbit:hover {
+    content: url('Image/jellycat2-a.png'); /* Replace with the new image path */
+}
+
+/* Title styling */
+.jrabbitd {
+    position: absolute; /* Use absolute positioning */
+    right: 46%; /* Adjust positioning as needed */
+    top: 103%; /* Adjust positioning as needed */
+}
+
+/* Price styling */
+.jrabbitd2 {
+    position: absolute; /* Use absolute positioning */
+    right: 50%; /* Adjust positioning as needed */
+    top:107%; /* Adjust positioning as needed */
+}
+
+
+
+
+
+.jellycat-grenn-bunny{
+    position: absolute; /* Use absolute positioning */
+    right: 10%; /* Adjust positioning as needed */
+    top: 113%; /* Adjust positioning as needed */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.jellycat-grenn-bunny:hover {
+    content: url('Image/jellycat3-a.png'); /* Replace with the new image path */
+}
+.jgreenrabbitd {
+    position: absolute; /* Use absolute positioning */
+    right: 14%; /* Adjust positioning as needed */
+    top: 103%; /* Adjust positioning as needed */
+}
+
+.jgreenrabbitd2 {
+    position: absolute; /* Use absolute positioning */
+    right: 20%; /* Adjust positioning as needed */
+    top:107%; /* Adjust positioning as needed */
+}
+
+
+
+.monamhee1{
+
+    position: absolute; /* Use absolute positioning */
+    right: 70%; /* Adjust positioning as needed */
+    top: 123%; /* Adjust positioning as needed */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+
+}
+
+.monamhee1:hover {
+    content: url('Image/모남희1-a.png'); /* Replace with the new image path */
+}
+
+.fird-monamhee{
+    position: absolute; /* Use absolute positioning */
+    right: 71%; /* Adjust positioning as needed */
+    top: 103%; /* Adjust positioning as needed */
+}
+
+.secd-monamhee{
+    position: absolute; /* Use absolute positioning */
+    right: 79%; /* Adjust positioning as needed */
+    top: 112%; /* Adjust positioning as needed */
+}
+
+
+
+.monamhee2{
+
+    position: absolute; /* Use absolute positioning */
+    right: 40%; /* Adjust positioning as needed */
+    top: 123%; /* Adjust positioning as needed */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+
+}
+
+.monamhee2:hover {
+    content: url('Image/모남희2-a.png'); /* Replace with the new image path */
+}
+
+.fird-monamhee2 {
+    position: absolute; /* Use absolute positioning */
+    right: 40%; /* Adjust positioning as needed */
+    top: 103%; /* Adjust positioning as needed */
+}
+
+.secd-monamhee2{
+    position: absolute; /* Use absolute positioning */
+    right: 49%; /* Adjust positioning as needed */
+    top: 112%; /* Adjust positioning as needed */
+}
+
+
+
+.monamhee3{
+    position: absolute; /* Use absolute positioning */
+    right: 10%; /* Adjust positioning as needed */
+    top: 123%; /* Adjust positioning as needed */
+    transition: all 0.3s ease-in-out; /* Smooth transition */}
+
+.monamhee3:hover {
+    content: url('Image/모남희3-a.png'); /* Replace with the new image path */
+}
+
+.fird-monamhee3 {
+    position: absolute; /* Use absolute positioning */
+    right: 13%; /* Adjust positioning as needed */
+    top: 103%; /* Adjust positioning as needed */
+}
+
+.secd-monamhee3{
+    position: absolute; /* Use absolute positioning */
+    right: 19%; /* Adjust positioning as needed */
+    top: 112%; /* Adjust positioning as needed */
+}
+
+
+
+
+.godashin1 {
+    position: absolute; /* Use absolute positioning */
+    right: 70%; /* Adjust positioning as needed */
+    top: 133%; /* Adjust positioning as needed */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.godashin1:hover {
+    content: url('Image/godashin1-a.png'); /* Replace with the new image path */
+}
+
+.fird-godashin {
+    position: absolute; /* Use absolute positioning */
+    right: 75%; /* Adjust positioning as needed */
+    top: 118%; /* Adjust positioning as needed */
+}
+
+.secd-godashin {
+    position: absolute; /* Use absolute positioning */
+    right: 79%; /* Adjust positioning as needed */
+    top: 124%; /* Adjust positioning as needed */
+}
+
+
+
+.godashin2 {
+    position: absolute; /* Use absolute positioning */
+    right: 40%; /* Adjust positioning as needed */
+    top: 133%; /* Adjust positioning as needed */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.godashin2:hover {
+    content: url('Image/godashin2-a.png'); /* Replace with the new image path */
+}
+
+.fird-godashin2 {
+    position: absolute; /* Use absolute positioning */
+    right: 44%; /* Adjust positioning as needed */
+    top: 118%; /* Adjust positioning as needed */
+}
+
+.secd-godashin2 {
+    position: absolute; /* Use absolute positioning */
+    right: 49%; /* Adjust positioning as needed */
+    top: 124%; /* Adjust positioning as needed */
+}
+
+
+
+.godashin3 {
+    position: absolute; /* Use absolute positioning */
+    right: 10%; /* Adjust positioning as needed */
+    top: 133%; /* Adjust positioning as needed */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.godashin3:hover {
+    content: url('Image/godashin3-a.png'); /* Replace with the new image path */
+}
+
+.fird-godashin3 {
+    position: absolute; /* Use absolute positioning */
+    right: 16%; /* Adjust positioning as needed */
+    top: 118%; /* Adjust positioning as needed */
+}
+
+.secd-godashin3 {
+    position: absolute; /* Use absolute positioning */
+    right: 19%; /* Adjust positioning as needed */
+    top: 124%; /* Adjust positioning as needed */
+}
+
+
+.olivet-container {
+    text-align: center; /* 가운데 정렬 */
+    animation: fadeIn 1.5s ease-in-out; /* 애니메이션 적용 */
+    opacity: 0; /* 초기값: 보이지 않음 */
+    animation-fill-mode: forwards; /* 애니메이션 끝난 후 상태 유지 */
+    position: absolute; /* 수정된 부분: fixed에서 absolute로 변경 */
+    top: 35%; /* 여전히 top 위치는 설정 */
+    left: 31%; /* 가운데 정렬 */
+    transform: translateX(-50%); /* 정확히 가운데로 위치 */
+}
+
+
+.olivet1 {
+    position: absolute; /* Use absolute positioning */
+    right: 70%; /* Adjust positioning as needed */
+    top: 133%; /* Adjust positioning as needed */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.olivet1:hover {
+    content: url('Image/olivet1-a.png'); /* Replace with the new image path */
+}
+
+.fird-olivet {
+    position: absolute; /* Use absolute positioning */
+    right: 71%; /* Adjust positioning as needed */
+    top: 120%; /* Adjust positioning as needed */
+}
+
+.secd-olivet {
+    position: absolute; /* Use absolute positioning */
+    right: 79%; /* Adjust positioning as needed */
+    top: 126%; /* Adjust positioning as needed */
+}
+
+.olivet2 {
+    position: absolute; /* Use absolute positioning */
+    right: 40%; /* Adjust positioning as needed */
+    top: 133%; /* Adjust positioning as needed */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.olivet2:hover {
+    content: url('Image/olivet2-a.png'); /* Replace with the new image path */
+}
+
+.fird-olivet2 {
+    position: absolute; /* Use absolute positioning */
+    right: 41%; /* Adjust positioning as needed */
+    top: 120%; /* Adjust positioning as needed */
+}
+
+.secd-olivet2 {
+    position: absolute; /* Use absolute positioning */
+    right: 49%; /* Adjust positioning as needed */
+    top: 126%; /* Adjust positioning as needed */
+}
+
+
+.olivet3 {
+    position: absolute; /* Use absolute positioning */
+    right: 10%; /* Adjust positioning as needed */
+    top: 133%; /* Adjust positioning as needed */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.olivet3:hover {
+    content: url('Image/olivet3-a.png'); /* Replace with the new image path */
+}
+
+.fird-olivet3 {
+    position: absolute; /* Use absolute positioning */
+    right: 11%; /* Adjust positioning as needed */
+    top: 120%; /* Adjust positioning as needed */
+}
+
+.secd-olivet3 {
+    position: absolute; /* Use absolute positioning */
+    right: 19%; /* Adjust positioning as needed */
+    top: 126%; /* Adjust positioning as needed */
+}

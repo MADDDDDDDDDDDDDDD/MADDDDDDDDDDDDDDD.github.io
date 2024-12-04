@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="bootstrap.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"
+        <div class="container-fluid">
+            <!-- 로고 -->
+            <a class="navbar-brand" href="index.html">
+                <img src="Image/LOGO.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+            </a>
+            
+
+            <!-- 토글 버튼 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 메뉴 및 검색 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- 메뉴 -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">CONTACT</a>
+                    </li>
+                    <li class="jellycat">
+                        <a class="nav-link active" href="jellycat.html">Jelly Cat</a>
+                    </li>
+                    <li class="monamhee">
+                        <a class="nav-link active" href="monamhee.html">Monamhee</a>
+                    </li>
+                    <li class="godashin">
+                        <a class="nav-link active" href="godashin.html">Godashin</a>
+                    </li>
+                    <li class="olivet">
+                        <a class="nav-link active" href="olivet.html">Olivet</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="wholeconatact">
+    <section class="contact-section">
+        <div class="container">
+            <h1 class="section-title">Contact Us</h1>
+            <p class="section-description">
+                We’d love to hear from you! Whether you have questions or feedback, feel free to get in touch with us.
+            </p>
+            
+            <form class="contact-form" action="send_email.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" class="form-control" placeholder="Enter subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" placeholder="Your message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            
+        </div>
+    </section>
+
+<p class="add">Please write here if there is a feature you would like to see added as an example, or if an error occurs. </p>
+
+<img src="Image/KakaoTalk_Photo_2024-12-04-23-46-57.gif" alt="description of the gif" class="contact-image" width="800px" height="500">
+
+</div>
+
+    <footer class="footer bg-dark text-white text-center">
+        <p>&copy; DUDEOJI. YEONWOO.</p>
+    </footer>
+
+<style>
+
+    .wholeconatact{
+        position:absolute;
+        top: 70px;
+    }
+.contact-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: black;
+}
+
+
+.section-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffd1d1;
+}
+
+.section-description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #fffcfc;
+}
+
+/* Form Styling */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 16px;
+    color: #fff;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+.footer {
+    padding: 20px 0;
+    margin-top: 30px;
+    position: absolute;
+    top: 200%;
+    width: 100%;
+
+}
+
+.add{
+    position: absolute;
+    top:100%;
+    right:7%;
+}
+
+.contact-image{
+    position: relative;
+    top: 10%;
+}
+    </style>
+</body>
+</html>

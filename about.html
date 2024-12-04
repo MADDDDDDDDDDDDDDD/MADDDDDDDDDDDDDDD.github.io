@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="bootstrap.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"
+        <div class="container-fluid">
+            <!-- 로고 -->
+            <a class="navbar-brand" href="index.html">
+                <img src="Image/LOGO.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+            </a>
+            
+
+            <!-- 토글 버튼 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 메뉴 및 검색 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- 메뉴 -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">CONTACT</a>
+                    </li>
+                    <li class="jellycat">
+                        <a class="nav-link active" href="jellycat.html">Jelly Cat</a>
+                    </li>
+                    <li class="monamhee">
+                        <a class="nav-link active" href="monamhee.html">Monamhee</a>
+                    </li>
+                    <li class="godashin">
+                        <a class="nav-link active" href="godashin.html">Godashin</a>
+                    </li>
+                    <li class="olivet">
+                        <a class="nav-link active" href="olivet.html">Olivet</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="about-section">
+        <div class="container">
+            <h1 class="section-title">About Us</h1>
+            <p class="section-description">
+                Welcome to My Website! Our mission is to provide you with the best quality products and services. 
+                Founded in 2023, we are dedicated to creativity, innovation, and excellence. 
+            </p>
+            <p>
+                At My Website, we specialize in offering unique and premium experiences that cater to your needs. 
+                Our values are rooted in customer satisfaction, teamwork, and integrity.
+            </p>
+            <img src="Image/snow-gif-4.gif" alt="description of the gif" class="about-image" width="1200px">
+        </div>
+    </section>
+    
+    <footer class="footer bg-dark text-white text-center">
+        <p>&copy; 2024 DUDEOJI. YEONWOO HWANG.</p>
+    </footer>
+    
+<style>
+    /* General Body Style */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #2f2424;
+        color: #fffcfc;
+    }
+    
+    /* About Section */
+    .about-section {
+        padding: 50px 20px;
+        text-align: center;
+        background-color: black;
+    }
+    
+    /* Title Animation */
+    .section-title {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #ffd1d1;
+        opacity: 0;
+        transform: translateX(-100%);
+        animation: slideInFromLeft 1s forwards;
+    }
+    
+    /* Paragraph Animation */
+    .section-description, .about-section p:nth-child(3) {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        opacity: 0;
+        transform: translateX(100%);
+        animation: slideInFromRight 1s forwards;
+        animation-delay: 0.5s;
+    }
+    
+    /* GIF Animation */
+    .about-image {
+        border-radius: 10px;
+        margin-top: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 80%;
+        right: 10%;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInWithGradient 2s forwards;
+        animation-delay: 1s;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 20px 0;
+        margin-top: 30px;
+        position: absolute;
+        top: 200%;
+    }
+    
+    /* Keyframe Animations */
+    
+    /* Slide In Title from Left */
+    @keyframes slideInFromLeft {
+        0% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    /* Slide In Paragraphs from Right */
+    @keyframes slideInFromRight {
+        0% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    /* GIF Fade In with Gradient Effect */
+    @keyframes fadeInWithGradient {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+            background: rgba(255, 255, 255, 0);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent gradient */
+        }
+    }
+</style>
+
+</body>
+</html>
