@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="bootstrap.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"
+        <div class="container-fluid">
+            <!-- 로고 -->
+            <a class="navbar-brand" href="index.html">
+                <img src="Image/LOGO.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+            </a>
+            
+
+            <!-- 토글 버튼 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 메뉴 및 검색 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- 메뉴 -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">CONTACT</a>
+                    </li>
+                    <li class="jellycat">
+                        <a class="nav-link active" href="jellycat.html">Jelly Cat</a>
+                    </li>
+                    <li class="monamhee">
+                        <a class="nav-link active" href="monamhee.html">Monamhee</a>
+                    </li>
+                    <li class="godashin">
+                        <a class="nav-link active" href="godashin.html">Godashin</a>
+                    </li>
+                    <li class="olivet">
+                        <a class="nav-link active" href="olivet.html">Olivet</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- DUDEOJI Title -->
+    <div class="title-container">
+        <h1 class="main-title">DUDEOJI</h1>
+    </div>
+    
+    <h2 class="title-container2">
+        "Discover the hottest trending dolls your ultimate destination for must have toys"
+    </h2>
+
+    <div class="image-slider">
+        <div class="slider-content">
+            <img src="Image/토마토 background.jpg" alt="Image 1">
+            <img src="Image/코끼리 인형.jpg" alt="Image 2">
+            <img src="Image/아보카도 인형.jpg" alt="Image 3">
+            <img src="Image/소 인형.jpg" alt="Image 4">
+            <img src="Image/개구리 인형.jpg" alt="Image 5">
+            <img src="Image/강아지 인형들.jpg" alt="Image 6">
+            <img src="Image/강렬한 색 인형.jpg" alt="Image 7">
+        </div>
+    </div>
+
+
+
+    <style>
+        .title-container2{
+            size: 150px;
+            text-align:end;
+        }
+
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+}
+
+.image-slider {
+    width: 100%;
+    overflow: hidden; /* Hides the images that are outside the container */
+    position: relative;
+    top: 300px;
+}
+
+
+.slider-content {
+    display: flex;
+    animation: scroll-left 10s linear infinite; /* Scrolls the images leftwards */
+}
+
+.slider-content img {
+    width: 200px; /* Set your image width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between images */
+}
+
+/* Keyframe for infinite left scroll */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Move all images completely out of view */
+    }
+}
+
+
+    </style>
+
+    
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
